@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire På Stribe!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fire På Stribe!</h1> 
+
+
+
+
+    <div id="board">
+
+        <button class="btn" data-col="0">↓</button>
+        <button class="btn" data-col="1">↓</button>
+        <button class="btn" data-col="2">↓</button>
+        <button class="btn" data-col="3">↓</button>
+        <button class="btn" data-col="4">↓</button>
+        <button class="btn" data-col="5">↓</button>
+        <button class="btn" data-col="6">↓</button>
+
+        <div class="cell" data-row="0" data-col="0"></div>
+        <div class="cell" data-row="0" data-col="1"></div>
+        <div class="cell" data-row="0" data-col="2"></div>
+        <div class="cell" data-row="0" data-col="3"></div>
+        <div class="cell" data-row="0" data-col="4"></div>
+        <div class="cell" data-row="0" data-col="5"></div>
+        <div class="cell" data-row="0" data-col="6"></div>
+
+        <div class="cell" data-row="1" data-col="0"></div>
+        <div class="cell" data-row="1" data-col="1"></div>
+        <div class="cell" data-row="1" data-col="2"></div>
+        <div class="cell" data-row="1" data-col="3"></div>
+        <div class="cell" data-row="1" data-col="4"></div>
+        <div class="cell" data-row="1" data-col="5"></div>
+        <div class="cell" data-row="1" data-col="6"></div>
+
+        <div class="cell" data-row="2" data-col="0"></div>
+        <div class="cell" data-row="2" data-col="1"></div>
+        <div class="cell" data-row="2" data-col="2"></div>
+        <div class="cell" data-row="2" data-col="3"></div>
+        <div class="cell" data-row="2" data-col="4"></div>
+        <div class="cell" data-row="2" data-col="5"></div>
+        <div class="cell" data-row="2" data-col="6"></div>
+
+        <div class="cell" data-row="3" data-col="0"></div>
+        <div class="cell" data-row="3" data-col="1"></div>
+        <div class="cell" data-row="3" data-col="2"></div>
+        <div class="cell" data-row="3" data-col="3"></div>
+        <div class="cell" data-row="3" data-col="4"></div>
+        <div class="cell" data-row="3" data-col="5"></div>
+        <div class="cell" data-row="3" data-col="6"></div>
+
+        <div class="cell" data-row="4" data-col="0"></div>
+        <div class="cell" data-row="4" data-col="1"></div>
+        <div class="cell" data-row="4" data-col="2"></div>
+        <div class="cell" data-row="4" data-col="3"></div>
+        <div class="cell" data-row="4" data-col="4"></div>
+        <div class="cell" data-row="4" data-col="5"></div>
+        <div class="cell" data-row="4" data-col="6"></div>
+
+        <div class="cell" data-row="5" data-col="0"></div>
+        <div class="cell" data-row="5" data-col="1"></div>
+        <div class="cell" data-row="5" data-col="2"></div>
+        <div class="cell" data-row="5" data-col="3"></div>
+        <div class="cell" data-row="5" data-col="4"></div>
+        <div class="cell" data-row="5" data-col="5"></div>
+        <div class="cell" data-row="5" data-col="6"></div>
+    </div>
+    <br>
+    <button id="resetBtn">RESET</button>
+
+    <script type="module" src="Model.js"></script>
+    <script type="module" src="View.js"></script>
+    <script type="module" src="Controller.js"></script>
+    <script type="module">
+    import Model from './Model.js';
+    import View from './View.js';
+    import Controller from './Controller.js';
+
+    const model = new Model(6,7);
+    const view = new View();
+    const controller = new Controller(model, view);
+   
+</script>
+</body>
+</html>
